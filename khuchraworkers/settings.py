@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "authentication",
+    "client",
+    "common",
+    "freelancer",
+    "landingpage",
+    "payment"
 ]
 
 MIDDLEWARE = [
@@ -75,8 +81,13 @@ WSGI_APPLICATION = "khuchraworkers.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        # postgres
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "khuchra_workers",
+        "USER": "khuchradmin",
+        "PASSWORD": "goriberUPwork100",
+        "HOST": "localhost",
+        "PORT": "7654",
     }
 }
 
